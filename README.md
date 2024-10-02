@@ -1,12 +1,12 @@
 # Taxi Data Analysis with local LLMs
 This repository showcases a personal project where I deploy a Large Language Model (LLM) locally using OpenWebUI to perform data analysis on the NYC Taxi dataset.
 
-![hello world](images/hellow_world.png)
+![hello world](images/hello_world.png)
 
 ## Data Cleaning and Analysis
 Data handling and analysis is divided into major parts. In the first part, we will begin by cleaning the data---getting rid of duplicates, null values, etc. This will be following by doing exploratory analysis to gain insights on the data. We will use `deepseek-coder-v2` 16B parameter model for the purposes of code generation. An example of how we can use it is the following: I asked it to generate me the python script for reading `.parquet` file 
 
-![parquet](images/parquest.png)
+![parquet](images/parquet.png)
 
 ### Data cleaning and main results
 
