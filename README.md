@@ -16,10 +16,10 @@ We start the cleaning process by looking at the correlation map between various 
 
 From the above plot, we notice that there are some parameters that do not have provide any additional information, like VendorID and store_and_fwd_flag. We will drop these. Next we found that there were zero duplicate entires. The number of zero values for passenger count is found to be 31465, trip duration were 60371 and total amount were 416. These values were dropped as clearly, there was some error in the data entry. After the deletion, we find:
 
-Number of duplicate rows removed: 91177
-Original DataFrame size in terms of rows: 2964624
-Duplicated DataFrame size in terms of rows: 2873447
-Reduction in the number of rows: 3.08%
+Number of duplicate rows removed: 91177 \
+Original DataFrame size in terms of rows: 2964624 \
+Duplicated DataFrame size in terms of rows: 2873447 \
+Reduction in the number of rows: 3.08% 
 
 We drop all the data from the other years except 2024, as they contain only 15 entries in total. Lastly, we also calculate trip duration by using the difference of the `tpep_dropoff_datetime` and `tpep_pickup_datetime` parameters and dropping the values which have zero difference. There were only 53 of these. 
 
