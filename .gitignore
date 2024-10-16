@@ -491,3 +491,5 @@ laser_gyroscope/inlab/inlab_photos
 
 # ignore pdf
 moessbauer/report/moess_report.pdf
+
+data/cleaned_data.csv
