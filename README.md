@@ -31,19 +31,19 @@ The main objective of this analysis is to understand the taxi data to derive use
 
 The total trips by hour for each day in January is shown in the plot below. 
 
-![trips](nooftrips.png) 
+![trips](images/nooftrips.png) 
 
 Wednesdays are the most popular days while Sundays are the least popular. The hours of 1600-1800 has the highest demand, surpassing even 0900-1100. Possible reason for Wednesday being more popular than Monday or Friday could be due to higher amount of scheduled meetings in the middle of the week and bars offering happy hours. The time frame of 1600-1800 fits well with the 9-5 office schedule, where everyone starts going home. A lesser demand in the morning can be possibly due to staggered work schedules and flexible office timings. The exact reasons for the most popular day and time remains unclear and more information will be required to deduce it. 
 
 Next, we look at the heat map of number of taxi pickups. 
 
-![pickup_heat](pickup_heat.png) 
+![pickup_heat](images/pickup_heat.png) 
 
 The borough with most amount of pickups is Manhattan and the rest of them are much lower. This can be explained due to the presence of many offices, employees and tourists in this region. The only other region with relatively higher pickup amount is the JFK Airport, which has to transport incoming passengers.  
 
 The trip distance vs fare amount is shown below 
 
-![tripdist](tripdistvsfare.png) 
+![tripdist](images/tripdistvsfare.png) 
 
 The relation between these two parameters is linear and expected. 
 
