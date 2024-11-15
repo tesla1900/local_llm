@@ -21,9 +21,31 @@ Original DataFrame size in terms of rows: 2964624 \
 Duplicated DataFrame size in terms of rows: 2873447 \
 Reduction in the number of rows: 3.08% 
 
-We drop all the data from the other years except 2024, as they contain only 15 entries in total. Lastly, we also calculate trip duration by using the difference of the `tpep_dropoff_datetime` and `tpep_pickup_datetime` parameters and dropping the values which have zero difference. There were only 53 of these. 
+We drop all the data from the other years except 2024, as they contain only 15 entries in total. We also calculate trip duration by using the difference of the `tpep_dropoff_datetime` and `tpep_pickup_datetime` parameters and dropping the values which have zero difference. There were only 53 of these. 
+
+We remove all the trips with negative fare value to avoid contamination. All the trips above the trip distance of 50 miles are removed due to inconsistent trip distance and trip fare (and the size of NYC is ca. 33 miles x 13 miles). 
 
 ### Data analysis and main results
+
+The main objective of this analysis is to understand the taxi data to derive useful information like what are the most popular times/locations for people to catch a taxi, such that taxi drivers can remain active around that time/location to optimize their pickup strategy. Furthermore, we will perform regression analysis to predict repeatable patterns. 
+
+The total trips by hour for each day in January is shown in the plot below. 
+
+![trips](nooftrips.png) 
+
+Wednesdays are the most popular days while Sundays are the least popular. The hours of 1600-1800 has the highest demand, surpassing even 0900-1100. Possible reason for Wednesday being more popular than Monday or Friday could be due to higher amount of scheduled meetings in the middle of the week and bars offering happy hours. The time frame of 1600-1800 fits well with the 9-5 office schedule, where everyone starts going home. A lesser demand in the morning can be possibly due to staggered work schedules and flexible office timings. The exact reasons for the most popular day and time remains unclear and more information will be required to deduce it. 
+
+Next, we look at the heat map of number of taxi pickups. 
+
+![pickup_heat](pickup_heat.png) 
+
+The borough with most amount of pickups is Manhattan and the rest of them are much lower. This can be explained due to the presence of many offices, employees and tourists in this region. The only other region with relatively higher pickup amount is the JFK Airport, which has to transport incoming passengers.  
+
+The trip distance vs fare amount is shown below 
+
+![tripdist](tripdistvsfare.png) 
+
+The relation between these two parameters is linear and expected. 
 
 
 ## Setup of local LLM
